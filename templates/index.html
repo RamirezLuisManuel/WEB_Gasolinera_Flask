@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas-App | Localizador de Estaciones</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header>
+    <div class="logo"><strong>GAS</strong>Station</div>
+    <nav>Sistema de Gestión v2.0</nav>
+</header>
+<div class="container mt-3">
+    <nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-light p-2 rounded">
+        {% for item in breadcrumb %}
+        {% if loop.last %}
+            <li class="breadcrumb-item active text-capitalize" aria-current="page">{{ item }}</li>
+        {% else %}
+            <li class="breadcrumb-item text-capitalize">{{ item }}</li>
+        {% endif %}
+        {% endfor %}
+    </ol>
+    </nav>
+</div>
+<main class="main-container">
+    <div class="card">
+        <h1>Bienvenido</h1>
+        <p class="subtitle">Localice la estación de servicio más cercana para consultar precios y disponibilidad.</p>
+        
+        <a href="/buscar" class="btn-primary">
+            BUSCAR ESTACIONES
+        </a>
+    </div>
+</main>
+
+<footer>
+    <div>© 2026 Red de Gasolineras Nacionales</div>
+    <div>Soporte: 01-800-FUEL</div>
+</footer>
+</body>
+</html>

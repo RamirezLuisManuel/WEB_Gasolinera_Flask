@@ -1,0 +1,171 @@
+:root {
+    --primary: #004a99; /* Azul corporativo */
+    --accent: #ff8800;  /* Naranja de atención (gasolina) */
+    --bg-light: #f4f7f6;
+    --text-dark: #2c3e50;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Footer */
+header, footer {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    z-index: 10;
+}
+
+footer {
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+/* Contenedor Principal */
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Card Profesional */
+.card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* Botones Modernos */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #003366;
+}
+
+/* Estilos específicos para el Mapa */
+.map-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+#map {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid #ddd;
+}
+
+/* Contenedor General */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+/* Estilo de Breadcrumb */
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    list-style: none;
+    background-color: #ebedef; /* Gris muy claro industrial */
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: var(--primary); /* Azul de tu paleta */
+    font-weight: 500;
+}
+
+/* El separador / entre elementos */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "/";
+    padding: 0 10px;
+    color: #95a5a6; /* Gris ceniza */
+    font-weight: normal;
+}
+
+/* Elemento activo (en el que estás actualmente) */
+.breadcrumb-item.active {
+    color: #7f8c8d;
+    font-weight: normal;
+    pointer-events: none; /* No clickable */
+}
+
+/* Enlaces dentro de breadcrumb (opcional por si decides poner <a>) */
+.breadcrumb-item a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
