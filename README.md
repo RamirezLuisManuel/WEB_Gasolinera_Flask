@@ -28,12 +28,19 @@ Se instalaron las librerías necesarias para el servidor web y la comunicación 
 El proyecto implementa la arquitectura modular de Flask, organizando los recursos de la siguiente manera:
 
   flask_gas_app/
+  
   ├── app.py              # Núcleo de la aplicación y lógica de rutas
+  
   ├── static/             # Recursos estáticos
+  
   │   ├── css/            # Hojas de estilo (style.css)
+  
   │   └── images/         # Iconos y recursos visuales
+  
   └── templates/          # Vistas HTML (Jinja2)
+  
     ├── index.html      # Pantalla de bienvenida
+    
     └── map.html        # Buscador y mapa interactivo
 
 # 4. Implementación del Backend (Flask)
