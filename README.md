@@ -7,6 +7,7 @@ Para asegurar un entorno de desarrollo limpio y reproducible, se siguieron estos
 ## Creación del directorio raíz
 
 **mkdir flask_gas_app**
+
 **cd flask_gas_app**
 
 ## Entorno Virtual
@@ -32,8 +33,8 @@ El proyecto implementa la arquitectura modular de Flask, organizando los recurso
   │   ├── css/            # Hojas de estilo (style.css)
   │   └── images/         # Iconos y recursos visuales
   └── templates/          # Vistas HTML (Jinja2)
-      ├── index.html      # Pantalla de bienvenida
-      └── map.html        # Buscador y mapa interactivo
+    ├── index.html      # Pantalla de bienvenida
+    └── map.html        # Buscador y mapa interactivo
 
 # 4. Implementación del Backend (Flask)
 El archivo app.py actúa como el motor de la aplicación, gestionando peticiones HTTP y la integración con servicios de geolocalización externos.
@@ -45,6 +46,7 @@ Se utiliza la librería requests para consultar la API de Nominatim, enviando pa
 Se configuraron rutas dinámicas que inyectan migas de pan (breadcrumbs) para mejorar la navegación del usuario:
 
 **/: Renderiza el inicio.**
+
 **/buscar: Gestiona la búsqueda de locaciones y la visualización del mapa.**
 
 # 5. Frontend y Tecnologías de Interfaz
